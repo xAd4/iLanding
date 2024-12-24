@@ -7,7 +7,6 @@ export { FeaturesTwo } from "./FeaturesTwo";
 export { CallToAction } from "./CallToAction";
 export { Client } from "./Client";
 export { Testimonial } from "./Testimonial";
-export { Stats } from "./Stats";
 export { Services } from "./Services";
 export { Pricing } from "./Pricing";
 export { CallToActionTwo } from "./CallToActionTwo";

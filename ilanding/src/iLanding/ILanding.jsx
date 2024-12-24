@@ -8,7 +8,6 @@ import {
   CallToAction,
   Client,
   Testimonial,
-  Stats,
   Services,
   Pricing,
   CallToActionTwo,
@@ -68,10 +67,6 @@ export const ILanding = () => {
           {/* Testimonials Section */}
           <Testimonial />
           {/* /Testimonials Section */}
-
-          {/* Stats Section */}
-          <Stats />
-          {/* /Stats Section */}
 
           {/* Services Section */}
           <Services />

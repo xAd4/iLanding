@@ -1,4 +1,15 @@
+import { useForm } from "../hooks/useForm";
+
 export const CallToActionTwoForm = () => {
+  const { formControl, onInputChange } = useForm({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const { name, email, subject, message } = formControl;
+
   return (
     <>
       <form
@@ -16,6 +27,8 @@ export const CallToActionTwoForm = () => {
               className="form-control"
               placeholder="Your Name"
               required=""
+              value={name}
+              onChange={onInputChange}
             />
           </div>
           <div className="col-md-6 ">
@@ -25,6 +38,8 @@ export const CallToActionTwoForm = () => {
               name="email"
               placeholder="Your Email"
               required=""
+              value={email}
+              onChange={onInputChange}
             />
           </div>
           <div className="col-12">
@@ -34,6 +49,8 @@ export const CallToActionTwoForm = () => {
               name="subject"
               placeholder="Subject"
               required=""
+              value={subject}
+              onChange={onInputChange}
             />
           </div>
           <div className="col-12">
@@ -43,6 +60,8 @@ export const CallToActionTwoForm = () => {
               rows="6"
               placeholder="Message"
               required=""
+              value={message}
+              onChange={onInputChange}
             ></textarea>
           </div>
           <div className="col-12 text-center">
