@@ -30,7 +30,7 @@ export const NavBar = () => {
             <li>
               <a href="#pricing">Pricing</a>
             </li>
-            <li className="dropdown">
+            {/*<li className="dropdown">
               <a href="#">
                 <span>Dropdown</span>{" "}
                 <i className="bi bi-chevron-down toggle-dropdown"></i>
@@ -51,15 +51,6 @@ export const NavBar = () => {
                     <li>
                       <a href="#">Deep Dropdown 2</a>
                     </li>
-                    <li>
-                      <a href="#">Deep Dropdown 3</a>
-                    </li>
-                    <li>
-                      <a href="#">Deep Dropdown 4</a>
-                    </li>
-                    <li>
-                      <a href="#">Deep Dropdown 5</a>
-                    </li>
                   </ul>
                 </li>
                 <li>
@@ -72,9 +63,15 @@ export const NavBar = () => {
                   <a href="#">Dropdown 4</a>
                 </li>
               </ul>
-            </li>
+            </li>*/}
             <li>
               <a href="#contact">Contact</a>
+            </li>
+            <li>
+              <a href="#contact">Sign Up</a>
+            </li>
+            <li>
+              <a href="#contact">Log In</a>
             </li>
           </ul>
           <i className="mobile-nav-toggle d-xl-none bi bi-list"></i>

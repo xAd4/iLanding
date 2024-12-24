@@ -12,7 +12,7 @@ export const ServiceItem = () => {
               Provident nihil minus qui consequatur non omnis maiores. Eos
               accusantium minus dolores iure perferendis tempore et consequatur.
             </p>
-            <a href="service-details.html" className="read-more">
+            <a href="#" className="read-more">
               Read More <i className="bi bi-arrow-right"></i>
             </a>
           </div>
