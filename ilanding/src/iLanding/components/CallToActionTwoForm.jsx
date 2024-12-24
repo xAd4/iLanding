@@ -92,11 +92,6 @@ export const CallToActionTwoForm = () => {
             ></textarea>
           </div>
           <div className="col-12 text-center">
-            <div className="loading">Loading</div>
-            <div className="error-message"></div>
-            <div className="sent-message">
-              Your message has been sent. Thank you!
-            </div>
             <button type="submit" className="btn">
               Send Message
             </button>
