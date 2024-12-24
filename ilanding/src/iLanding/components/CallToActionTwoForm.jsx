@@ -1,7 +1,7 @@
 import { useForm } from "../hooks/useForm";
 
 export const CallToActionTwoForm = () => {
-  const { formControl, onInputChange } = useForm({
+  const { formControl, onInputChange, onResetForm } = useForm({
     name: "",
     email: "",
     subject: "",
@@ -9,6 +9,32 @@ export const CallToActionTwoForm = () => {
   });
 
   const { name, email, subject, message } = formControl;
+
+  // Consuming the API
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch("http://127.0.0.1:8000/api/contacts/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formControl),
+      });
+
+      if (response.ok) {
+        alert("Message sent successfully!");
+        onResetForm();
+      } else {
+        const errorData = await response.json();
+        alert(`Error: ${JSON.stringify(errorData)}`);
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("Error sent form.");
+    }
+  };
 
   return (
     <>
@@ -18,6 +44,7 @@ export const CallToActionTwoForm = () => {
         className="php-email-form"
         data-aos="fade-up"
         data-aos-delay="200"
+        onSubmit={handleSubmit}
       >
         <div className="row gy-4">
           <div className="col-md-6">
