@@ -1,0 +1,14 @@
+// This is a Barrel File
+export { NavBar } from "./NavBar";
+export { HeroSection } from "./HeroSection";
+export { About } from "./About";
+export { Features } from "./Features";
+export { FeaturesTwo } from "./FeaturesTwo";
+export { CallToAction } from "./CallToAction";
+export { Client } from "./Client";
+export { Testimonial } from "./Testimonial";
+export { Stats } from "./Stats";
+export { Services } from "./Services";
+export { Pricing } from "./Pricing";
+export { CallToActionTwo } from "./CallToActionTwo";
+export { Footer } from "./Footer";
