@@ -1,3 +1,5 @@
+import { StatsItem } from "./StatsItem";
+
 export const HeroSection = () => {
   return (
     <>
@@ -94,50 +96,12 @@ export const HeroSection = () => {
             data-aos="fade-up"
             data-aos-delay="500"
           >
-            <div className="col-lg-3 col-md-6">
-              <div className="stat-item">
-                <div className="stat-icon">
-                  <i className="bi bi-trophy"></i>
-                </div>
-                <div className="stat-content">
-                  <h4>3x Won Awards</h4>
-                  <p className="mb-0">Vestibulum ante ipsum</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-6">
-              <div className="stat-item">
-                <div className="stat-icon">
-                  <i className="bi bi-briefcase"></i>
-                </div>
-                <div className="stat-content">
-                  <h4>6.5k Faucibus</h4>
-                  <p className="mb-0">Nullam quis ante</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-6">
-              <div className="stat-item">
-                <div className="stat-icon">
-                  <i className="bi bi-graph-up"></i>
-                </div>
-                <div className="stat-content">
-                  <h4>80k Mauris</h4>
-                  <p className="mb-0">Etiam sit amet orci</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-6">
-              <div className="stat-item">
-                <div className="stat-icon">
-                  <i className="bi bi-award"></i>
-                </div>
-                <div className="stat-content">
-                  <h4>6x Phasellus</h4>
-                  <p className="mb-0">Vestibulum ante ipsum</p>
-                </div>
-              </div>
-            </div>
+            {/* Stats Item */}
+            <StatsItem />
+            <StatsItem />
+            <StatsItem />
+            <StatsItem />
+            {/* End Stats Item */}
           </div>
         </div>
       </section>
