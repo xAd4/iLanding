@@ -1,4 +1,5 @@
-export const FeatureItem = () => {
+/* eslint-disable react/prop-types */
+export const FeatureItem = ({ title, description, featureIcon }) => {
   return (
     <>
       <div
@@ -8,14 +9,11 @@ export const FeatureItem = () => {
       >
         <div className="d-flex align-items-center justify-content-end gap-4">
           <div className="feature-content">
-            <h3>Use On Any Device</h3>
-            <p>
-              Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-              posuere cubilia Curae; In ac dui quis mi consectetuer lacinia.
-            </p>
+            <h3>{title}</h3>
+            <p>{description}</p>
           </div>
           <div className="feature-icon flex-shrink-0">
-            <i className="bi bi-display"></i>
+            <i className={featureIcon}></i>
           </div>
         </div>
       </div>

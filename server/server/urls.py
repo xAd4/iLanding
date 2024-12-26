@@ -19,10 +19,12 @@ from django.urls import path, include
 from contact import urls
 from stats import urls
 from feature import urls
+from featureTwo import urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('contact/', include("contact.urls")),
     path('stats/', include("stats.urls")),
     path('feature/', include("feature.urls")),
+    path('featureTwo/', include("featureTwo.urls")),
 ]

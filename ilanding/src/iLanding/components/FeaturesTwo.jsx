@@ -1,7 +1,13 @@
+import { useFetch } from "../hooks/useFetch";
 import { FeatureItem } from "./FeatureItem";
 import { FeatureItemLeft } from "./FeatureItemLeft";
 
 export const FeaturesTwo = () => {
+  const { data } = useFetch("http://127.0.0.1:8000/featureTwo/featureItems/");
+  const { data2 } = useFetch(
+    "http://127.0.0.1:8000/featureTwo/featureItemsLeft/"
+  );
+
   return (
     <>
       <section id="features-2" className="features-2 section">
@@ -9,9 +15,17 @@ export const FeaturesTwo = () => {
           <div className="row align-items-center">
             <div className="col-lg-4">
               {/* Feature Item */}
-              <FeatureItem />
-              <FeatureItem />
-              <FeatureItem />
+              {data &&
+                data.map((item) => {
+                  return (
+                    <FeatureItem
+                      key={item.id}
+                      title={item.name}
+                      description={item.description}
+                      featureIcon={item.featureIcon}
+                    />
+                  );
+                })}
               {/* End .feature-item */}
             </div>
             <div className="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
@@ -26,9 +40,15 @@ export const FeaturesTwo = () => {
             {/* End Phone Mockup */}
             <div className="col-lg-4">
               {/* Feature Item left */}
-              <FeatureItemLeft />
-              <FeatureItemLeft />
-              <FeatureItemLeft />
+              {data2 &&
+                data2.map((item) => (
+                  <FeatureItemLeft
+                    key={item.id}
+                    title={item.name}
+                    description={item.description}
+                    featureIcon={item.featureIcon}
+                  />
+                ))}
               {/* End .feature-item */}
             </div>
           </div>

@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'contact',
     'stats',
     'feature',
+    'featureTwo',
 ]
 
 MIDDLEWARE = [
