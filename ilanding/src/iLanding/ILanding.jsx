@@ -8,7 +8,6 @@ import {
   CallToAction,
   Client,
   Services,
-  Pricing,
   CallToActionTwo,
   Footer,
 } from "./components";
@@ -72,7 +71,7 @@ export const ILanding = () => {
           {/* /Services Section */}
 
           {/* Pricing Section */}
-          <Pricing />
+          {/*<Pricing />*/}
           {/* /Pricing Section */}
 
           {/* Call To Action 2 Section */}

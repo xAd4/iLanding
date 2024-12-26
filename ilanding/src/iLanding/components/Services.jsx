@@ -1,6 +1,8 @@
+import { useFetch } from "../hooks/useFetch";
 import { ServiceItem } from "./ServiceItem";
 
 export const Services = () => {
+  const { data } = useFetch("http://127.0.0.1:8000/services/services/");
   return (
     <>
       <section id="services" className="services section light-background">
@@ -16,10 +18,15 @@ export const Services = () => {
         <div className="container" data-aos="fade-up" data-aos-delay="100">
           <div className="row g-4">
             {/* Service Card */}
-            <ServiceItem />
-            <ServiceItem />
-            <ServiceItem />
-            <ServiceItem />
+            {data &&
+              data.map((service) => (
+                <ServiceItem
+                  key={service.id}
+                  name={service.name}
+                  description={service.description}
+                  serviceIcon={service.serviceIcon}
+                />
+              ))}
             {/* End Service Card */}
           </div>
         </div>

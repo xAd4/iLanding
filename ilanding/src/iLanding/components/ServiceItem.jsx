@@ -1,20 +1,18 @@
-export const ServiceItem = () => {
+/* eslint-disable react/prop-types */
+export const ServiceItem = ({ name, description, serviceIcon }) => {
   return (
     <>
       <div className="col-lg-6" data-aos="fade-up" data-aos-delay="100">
         <div className="service-card d-flex">
           <div className="icon flex-shrink-0">
-            <i className="bi bi-activity"></i>
+            <i className={serviceIcon}></i>
           </div>
           <div>
-            <h3>Nesciunt Mete</h3>
-            <p>
-              Provident nihil minus qui consequatur non omnis maiores. Eos
-              accusantium minus dolores iure perferendis tempore et consequatur.
-            </p>
-            <a href="#" className="read-more">
+            <h3>{name}</h3>
+            <p>{description}</p>
+            {/*<a href="#" className="read-more">
               Read More <i className="bi bi-arrow-right"></i>
-            </a>
+            </a> */}
           </div>
         </div>
       </div>

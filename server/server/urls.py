@@ -23,6 +23,7 @@ from stats import urls
 from feature import urls
 from featureTwo import urls
 from clients import urls
+from services import urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -31,6 +32,7 @@ urlpatterns = [
     path('feature/', include("feature.urls")),
     path('featureTwo/', include("featureTwo.urls")),
     path('clients/', include("clients.urls")),
+    path('services/', include("services.urls")),
 ]
 
 if settings.DEBUG:
