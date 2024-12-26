@@ -1,6 +1,9 @@
+import { useFetch } from "../hooks/useFetch";
 import { StatsItem } from "./StatsItem";
 
 export const HeroSection = () => {
+  const { data } = useFetch("http://127.0.0.1:8000/stats/stats/");
+
   return (
     <>
       <section id="hero" className="hero section">
@@ -97,10 +100,19 @@ export const HeroSection = () => {
             data-aos-delay="500"
           >
             {/* Stats Item */}
-            <StatsItem />
-            <StatsItem />
-            <StatsItem />
-            <StatsItem />
+
+            {data &&
+              data.map((item) => {
+                return (
+                  <StatsItem
+                    key={item.id}
+                    title={item.title}
+                    description={item.description}
+                    statIcon={item.statIcon}
+                  />
+                );
+              })}
+
             {/* End Stats Item */}
           </div>
         </div>
