@@ -1,6 +1,9 @@
+import { useFetch } from "../hooks/useFetch";
 import { FeaturesCardItem } from "./FeaturesCardItem";
 
 export const Features = () => {
+  const { data } = useFetch("http://127.0.0.1:8000/feature/feature/");
+
   return (
     <>
       <section id="features" className="features section">
@@ -200,10 +203,20 @@ export const Features = () => {
         <div className="container">
           <div className="row gy-4">
             {/* Features Cards Item */}
-            <FeaturesCardItem />
-            <FeaturesCardItem />
-            <FeaturesCardItem />
-            <FeaturesCardItem />
+
+            {data &&
+              data.map((feature) => {
+                return (
+                  <FeaturesCardItem
+                    key={feature.id}
+                    title={feature.title}
+                    description={feature.description}
+                    featureIcon={feature.featureIcon}
+                    color={feature.color}
+                  />
+                );
+              })}
+
             {/* End Feature Borx*/}
           </div>
         </div>
