@@ -1,12 +1,9 @@
-export const ClientItem = () => {
+/* eslint-disable react/prop-types */
+export const ClientItem = ({ logo, name }) => {
   return (
     <>
       <div className="swiper-slide">
-        <img
-          src="./src/iLanding/assets/img/clients/client-1.png"
-          className="img-fluid"
-          alt=""
-        />
+        <img src={logo} className="img-fluid" alt={name} />
       </div>
     </>
   );

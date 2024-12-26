@@ -7,7 +7,6 @@ import {
   FeaturesTwo,
   CallToAction,
   Client,
-  Testimonial,
   Services,
   Pricing,
   CallToActionTwo,
@@ -65,7 +64,7 @@ export const ILanding = () => {
           {/* /Clients Section */}
 
           {/* Testimonials Section */}
-          <Testimonial />
+          {/*<Testimonial />*/}
           {/* /Testimonials Section */}
 
           {/* Services Section */}

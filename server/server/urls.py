@@ -16,10 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
+from server import settings
 from contact import urls
 from stats import urls
 from feature import urls
 from featureTwo import urls
+from clients import urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,4 +30,9 @@ urlpatterns = [
     path('stats/', include("stats.urls")),
     path('feature/', include("feature.urls")),
     path('featureTwo/', include("featureTwo.urls")),
+    path('clients/', include("clients.urls")),
 ]
+
+if settings.DEBUG:
+    from django.conf.urls.static import static
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

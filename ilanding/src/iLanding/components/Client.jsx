@@ -1,6 +1,8 @@
+import { useFetch } from "../hooks/useFetch";
 import { ClientItem } from "./ClientItem";
 
 export const Client = () => {
+  const { data } = useFetch("http://127.0.0.1:8000/clients/clients/");
   return (
     <>
       <section id="clients" className="clients section">
@@ -41,12 +43,16 @@ export const Client = () => {
             </script>
             <div className="swiper-wrapper align-items-center">
               {/* Client Item */}
-              <ClientItem />
-              <ClientItem />
-              <ClientItem />
-              <ClientItem />
-              <ClientItem />
-              <ClientItem />
+              {data &&
+                data.map((client) => {
+                  return (
+                    <ClientItem
+                      key={client.id}
+                      logo={client.logo}
+                      name={client.name}
+                    />
+                  );
+                })}
               {/* End Client Item */}
             </div>
             <div className="swiper-pagination"></div>
